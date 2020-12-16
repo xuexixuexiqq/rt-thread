@@ -14,6 +14,7 @@
 #include <rtthread.h>
 #include <rthw.h>
 #include <rtdevice.h>
+#include <board.h>
 
 #ifdef __cplusplus
 extern "C" {
