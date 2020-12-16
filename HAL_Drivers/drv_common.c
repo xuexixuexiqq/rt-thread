@@ -15,6 +15,8 @@
 #include "drv_usart.h"
 #endif
 
+void MX_USB_DEVICE_Init(void);
+
 #ifdef RT_USING_FINSH
 #include <finsh.h>
 static void reboot(uint8_t argc, char **argv)
@@ -164,5 +166,7 @@ RT_WEAK void rt_hw_board_init()
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
+
+	MX_USB_DEVICE_Init();
 }
 

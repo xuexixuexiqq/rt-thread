@@ -9,3 +9,14 @@
  */
  
 #include "board.h"
+
+uint8_t VCPSend(uint8_t* Buf,uint16_t Len);
+
+void rt_hw_console_output(const char* str)
+{
+  rt_enter_critical();
+  VCPSend((uint8_t*)(str), rt_strlen(str));
+  rt_exit_critical();
+  
+  rt_thread_delay(1);
+}
